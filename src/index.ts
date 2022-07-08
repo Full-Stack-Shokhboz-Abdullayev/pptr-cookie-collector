@@ -1,4 +1,4 @@
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-extra';
 import { getCookies, onload, setCookiesToServer } from './browser-actions';
 import { State } from './typings/State.type';
 
