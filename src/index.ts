@@ -6,7 +6,8 @@ import { State } from './typings/State.type';
   try {
     const browser = await puppeteer.launch({
       headless: false,
-      args: ['--disable-site-isolation-trials'],
+      defaultViewport: null,
+      args: ['--disable-site-isolation-trials', '--start-maximized'],
     });
     const state: State = {
       cookies: [],
@@ -34,6 +35,6 @@ import { State } from './typings/State.type';
         : console.log('Not updated, could not syncronise with the server :(');
     });
   } catch (err) {
-    console.log(err);
+    console.log('Somethings went wrong: \n', err);
   }
 })();

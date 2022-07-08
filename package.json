@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon",
-    "build": "tsc --build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx rimraf ./dist && tsc --build",
+    "start": "npm run build && node dist/index.js"
   },
   "author": "Shokhboz Abdullaev",
   "license": "ISC",
